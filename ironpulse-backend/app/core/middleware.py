@@ -23,6 +23,7 @@ def register_middleware(app: FastAPI) -> None:
             # Vercel — covers production + all preview deployments
             "https://ironpulse-frontend.vercel.app",
             "https://ironpulse.vercel.app",
+            "https://iron-pluse.vercel.app",
             # Local dev
             "http://localhost:3000",
             "http://localhost:3001",
