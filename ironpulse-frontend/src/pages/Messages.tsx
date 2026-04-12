@@ -1,0 +1,1 @@
+export default function Messages() { return (<div className="space-y-6"><h1 className="font-headline text-2xl font-black text-on-surface">Messages</h1><div className="bg-surface-container border border-outline-variant rounded-2xl p-6"><p className="text-on-surface-variant text-sm">Conversations — to be implemented</p></div></div>) }

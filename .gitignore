@@ -1,0 +1,34 @@
+# Environment files — NEVER commit these
+.env
+.env.local
+.env.*.local
+ironpulse-backend/.env
+ironpulse-frontend/.env
+ironpulse-frontend/.env.local
+
+# Firebase service account (contains private key)
+ironpulse-backend/firebase-service-account.json
+
+# Claude Code local memory
+.claude/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+*.db
+
+# Node
+node_modules/
+ironpulse-frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+*.DS_Store

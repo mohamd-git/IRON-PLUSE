@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   IRON PULSE — Design System Tokens (Tailwind v4)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@theme {
+  /* ── Colors ───────────────────────────────────────── */
+  --color-primary: #f3ffca;
+  --color-primary-fixed: #cafd00;
+  --color-primary-container: #cafd00;
+
+  --color-secondary: #ff7168;
+  --color-secondary-container: #c00018;
+
+  --color-background: #0e0e0e;
+  --color-surface: #0e0e0e;
+  --color-surface-container: #1a1a1a;
+  --color-surface-container-low: #131313;
+  --color-surface-container-high: #20201f;
+  --color-surface-container-highest: #262626;
+
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #adaaaa;
+
+  --color-outline: #767575;
+  --color-outline-variant: #484847;
+
+  /* ── Semantic aliases ─────────────────────────────── */
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-error: #ef4444;
+  --color-info: #60a5fa;
+
+  /* ── Fonts ────────────────────────────────────────── */
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Lexend", sans-serif;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Global Base Styles
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+html.dark {
+  background: #0e0e0e;
+  color: #ffffff;
+}
+
+body {
+  min-height: max(884px, 100dvh);
+  font-family: "Manrope", sans-serif;
+  background-color: #0e0e0e;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Machined texture */
+  background-image: radial-gradient(
+    circle at 2px 2px,
+    rgba(255, 255, 255, 0.04) 1px,
+    transparent 0
+  );
+  background-size: 24px 24px;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.4) 100%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ── Material Symbols ─────────────────────────────── */
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 24px;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.material-symbols-filled {
+  font-family: "Material Symbols Outlined";
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 24px;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ── Scrollbar ────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0e0e0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #484847;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #767575;
+}
+
+/* ── Selection ────────────────────────────────────── */
+::selection {
+  background: rgba(202, 253, 0, 0.3);
+  color: #ffffff;
+}
+
+/* ── Focus ring ───────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #cafd00;
+  outline-offset: 2px;
+}
+
+/* ── Smooth transitions ──────────────────────────── */
+* {
+  transition-property: background-color, border-color, color, opacity;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}
+
+/* ── Elite Aesthetic Directives ──────────────────── */
+.font-body { line-height: 1.7; }
+.font-label { letter-spacing: 0.15em !important; }
+.font-headline.text-xl, .font-headline.text-2xl, .font-headline.text-3xl, .font-headline.text-4xl, .font-headline.text-5xl, .font-headline.text-6xl, .font-headline.text-7xl {
+  letter-spacing: -0.03em;
+}
+
+.card-solid {
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: border-color 0.2s ease;
+}
+.card-solid:hover {
+  border-color: rgba(202, 253, 0, 0.15);
+}
+
+@keyframes shimmer { 
+  0% { background-position: -200% center; } 
+  100% { background-position: 200% center; } 
+}
+.vip-grade {
+  background: linear-gradient(90deg, #d4af37, #f5e642, #d4af37) !important;
+  background-size: 200% !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  animation: shimmer 3s linear infinite !important;
+}
+
+.img-hover-color {
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+}
+.img-hover-color:hover {
+  filter: grayscale(0%);
+}
