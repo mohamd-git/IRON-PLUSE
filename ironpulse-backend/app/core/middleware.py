@@ -24,6 +24,7 @@ def register_middleware(app: FastAPI) -> None:
             "https://ironpulse-frontend.vercel.app",
             "https://ironpulse.vercel.app",
             "https://iron-pluse.vercel.app",
+            "https://iron-pluse-xl.vercel.app",
             # Local dev
             "http://localhost:3000",
             "http://localhost:3001",
