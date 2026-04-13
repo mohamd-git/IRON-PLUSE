@@ -4,7 +4,7 @@ A tactical fitness platform built for serious athletes. IRON PULSE combines work
 
 ## Live App
 
-- **Frontend:** https://iron-pluse-xl.vercel.app
+- **Frontend:** https://iron-pluse-xi.vercel.app
 - **Backend API:** https://ironpulse-backend-31ra.onrender.com
 - **API Docs:** https://ironpulse-backend-31ra.onrender.com/docs
 
@@ -96,7 +96,7 @@ npm run dev
 
 ## Installing on Your Phone
 
-Open https://iron-pluse-xl.vercel.app in your phone browser:
+Open https://iron-pluse-xi.vercel.app in your phone browser:
 
 - **Android:** Menu (3 dots) → Add to Home Screen
 - **iPhone:** Share button → Add to Home Screen
